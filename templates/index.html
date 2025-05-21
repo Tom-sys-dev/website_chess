@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Accueil - Apprendre les Échecs{% endblock %}
+
+{% block content %}
+
+<section class="intro">
+  <h2>Améliorez votre jeu d'échecs</h2>
+  <p>Choisissez votre niveau et suivez des conseils adaptés pour progresser efficacement.</p>
+</section>
+
+<section class="level-selection">
+  <div class="level-card">
+    <h3>Débutant</h3>
+    <p>Apprenez les règles et les mouvements des pièces.</p>
+    <a class="level-btn" href="{{ url_for('debutant') }}">Commencer</a>
+  </div>
+  <div class="level-card">
+    <h3>Intermédiaire</h3>
+    <p>Développez vos tactiques et vos ouvertures.</p>
+    <a class="level-btn" href="{{ url_for('intermediaire') }}">Explorer</a>
+  </div>
+  <div class="level-card">
+    <h3>Expert</h3>
+    <p>Analysez des parties avancées et perfectionnez votre stratégie.</p>
+    <a class="level-btn" href="{{ url_for('expert') }}">Maîtriser</a>
+  </div>
+  <div class="level-card">
+    <h3>Ouvertures</h3>
+    <p>Découvrez les meilleur ouvertures pour chaque camps.</p>
+    <a class="level-btn" href="{{ url_for('ouvertures') }}">Apprendre</a>
+  </div>
+  <div class="level-card">
+    <h3>Coaching</h3>
+    <p>Apprenez encore plus vites avec des coaching personalisé.</p>
+    <a class="level-btn" href="{{ url_for('coaching') }}">Apprendre encore plus vite</a>
+  </div>
+  <div class="level-card">
+    <h3>echiquier</h3>
+    <p>resolvez des problemes pour vous ameliorer</p>
+    <a class="level-btn" href="{{ url_for('echiquier') }}">resoudre</a>
+  </div>
+</section>
+
+{% endblock %}
