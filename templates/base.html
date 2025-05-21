@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Apprendre les Échecs{% endblock %}</title>
+  <meta name="description" content="Un site pour apprendre à jouer aux échecs.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Feuilles de style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header>
+    <h1>Bienvenue sur <strong>Apprendre les Échecs</strong></h1>
+    <nav>
+      <a href="{{ url_for('index') }}">Accueil</a> |
+      <a href="{{ url_for('debutant') }}">Débutant</a> |
+      <a href="{{ url_for('intermediaire') }}">Intermédiaire</a> |
+      <a href="{{ url_for('expert') }}">Expert</a>|
+      <a href="{{ url_for('ouvertures') }}">Ouvertures</a>|
+      <a href="{{ url_for('coaching') }}">Coaching</a>
+      <a href="{{ url_for('echiquier') }}">echiquier</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+  </footer>
+
+  <!-- Scripts JS -->
+  <script src="{{ url_for('static', filename='js/chessboard-1.0.0.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
