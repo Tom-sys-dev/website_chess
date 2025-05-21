@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4259360507029705"crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu d'Échecs Interactif</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Jeu d'Échecs Interactif</h1>
+
+        <!-- Affichage du screenshot -->
+        <div class="screenshot">
+            <img src="{{ url_for('static', filename=image_path) }}" class="tip-img" style="width:25%; align="center";">
+        </div>
+
+        <!-- Message d'information -->
+        <p>{{ message }}</p>
+
+        <!-- Formulaire pour entrer la réponse -->
+        <form method="POST">
+            <label for="answer">Entrez votre réponse (par exemple : e2-e4) :</label>
+            <input type="text" id="answer" name="answer" value="{{ answer }}" required>
+            <button type="submit">Soumettre</button>
+        </form>
+    </div>
+</body>
+</html>
